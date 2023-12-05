@@ -4,7 +4,7 @@
  *
  * @type {string}
  */
-const PERSON_ANSWERS: string = "PersonAnswersDev";
+const PERSON_ANSWERS: string = "PersonAnswers";
 
 /**
  * Name of the definition answer field

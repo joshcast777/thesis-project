@@ -7,7 +7,7 @@ import { Person } from "@/types";
  *
  * @type {string}
  */
-const PERSONS: string = "PersonsDev";
+const PERSONS: string = "Persons";
 
 /**
  * Name of the age field
@@ -63,9 +63,9 @@ const PERSON_DEFAULT: Person = {
 	answers: "",
 	dni: "",
 	id: "",
-	name: ""
-	// sex: "",
-	// educationLevel: ""
+	name: "",
+	sex: "",
+	educationLevel: ""
 } as const;
 
 export { FIELD_AGE, FIELD_ANSWERS, FIELD_DNI, FIELD_EDUCATION_LEVEL, FIELD_NAME, FIELD_SEX, PERSONS, PERSON_DEFAULT };
