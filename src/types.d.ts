@@ -183,7 +183,7 @@ type TermStore = {
 	currentTermIndex: number;
 	errorMessage: string;
 	isLoading: boolean;
-	getTerm: () => Promise<void>;
+	getTerm: (id: number) => Promise<void>;
 	setCurrentTermIndex: (currentTermIndex: number) => void;
 };
 

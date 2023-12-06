@@ -7,7 +7,7 @@ import { Person } from "@/types";
  *
  * @type {string}
  */
-const PERSONS: string = "PersonsDev";
+const PERSONS: string = "Persons";
 
 /**
  * Name of the age field
