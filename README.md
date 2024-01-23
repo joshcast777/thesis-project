@@ -1,27 +1,71 @@
-# React + TypeScript + Vite
+# Sistema Web de Tesis
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+__[Link del GitHub](https://github.com/joshcast777/thesis-project)__
 
-Currently, two official plugins are available:
+Este es un pequeño sistema web que forma parte del proyecto de tesis para Ingeniería de Sofytware que servirá para que los anotadores puedan dar retroalimentación sobre si las definiciones, ejemplos y casos de uso le ayudan a comprender mejor el término mostrado.
 
--   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
--   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Información de la Tesis
 
-## Expanding the ESLint configuration
+La tesis contempla el análisis de si las definiciones, ejemplos y casos de uso generados por GPT-3 son útiles para la síntesis de textos científicos.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Los anotadores usarían este sistema web para dar su calificación a lo que generó GPT-3.
 
--   Configure the top-level `parserOptions` property like this:
+## Función del Proyecto de GitHub en la Tesis
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+Este sistema web se usará para recopilar la calificación que los anotadores darán a las definiciones, ejempos y casos de uso generados por GPT-3.
+
+La calificación de los anotadores será según las siguientes preguntas:
+
+- __Para la definición:__ *¿Considera que esta definición le ayuda a comprender el término en cuestión?*
+- __Para el ejemplo:__ *¿Este ejemplo le ha ayudado a comprender mejor el término en cuestión?*
+- __Para el caso de uso:__ *¿El caso de uso le ha ayudado a comprender mejor el término en cuestión?*
+
+La calificación también se comprende en el siguiente rango:
+
+- <span style="color:#EF4444">Totalmente de acuerdo.</span>
+- <span style="color:#FB923C">De acuerdo.</span>
+- <span style="color:#EAB308">Neutro.</span>
+- <span style="color:#22C55E">En desacuerdo</span>
+- <span style="color:#3B82F6">Totalmente en desascuerdo</span>
+
+Estas opciones son las que el anotador deberá escoger al analizar los textos.
+
+## Herramientas y bibliotecas utilizadas
+
+- React (versión 18.2.0)
+- Vite.js (versión 4.4.5)
+- TypeScript (versión 5.0.2)
+- TailwindCSS (versión 3.3.5)
+- Zod (versión 3.22.4)
+- Zustand (version 4.4.6)
+- React Hook Form (versión 7.48.2)
+- Supabase (versión 2.38.4)
+- TanStack Query (versión 5.8.2)
+- ShadCN UI
+- Netlify
+
+## Instalación y ejecución
+
+Para instalar y ejecutar este proyecto deberá tener Node.js instalado en su computador, de preferencia, la última versión.
+
+```bash
+# Clona el repositorio
+git clone https://github.com/joshcast777/thesis-project.git
+
+# Accede al directorio del proyecto
+cd thesis-project
+
+# Instala las dependencias
+npm i
+
+# Ejecuta el proyecto
+npx run dev
 ```
 
--   Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
--   Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
--   Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+El proyecto tiene un archivo `pnpm-lock.yaml`, lo que indica que el proyecto se creó con PNPM y no con NPM.
+
+El usar NPM no causará eproblemas al momento de ejecutarlo, solo descargará los node modules y creará el archivo package-lock.json
+
+## Uso
+
+El anotador ingresará al sitio web y deberá ingresar su cédula, esto revisará si ya está registrado; en caso de ser positivo mostrará las preguntas, en caso de ser negativo mostrará los demás campos a ser llenados.
