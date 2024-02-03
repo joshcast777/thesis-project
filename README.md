@@ -40,11 +40,16 @@ Estas opciones son las que el anotador deberá escoger al analizar los textos.
 - Zustand (version 4.4.6)
 - React Hook Form (versión 7.48.2)
 - Supabase (versión 2.38.4)
-- TanStack Query (versión 5.8.2)
 - ShadCN UI
 - Netlify
 
 ## Instalación y ejecución
+
+Antes de ejecutar el proyecto, deberá configurar las variables de entorno en el proyecto. Para esto deberá tener a la mano el API Key y la URL de Supabase, que la obtuvo al momento de crear la cuenta en la plataforma. Esto se indica en el __Anexo 5. Manual técnico__ de la tesis a la que pertenece este proyecto.
+
+1. Cambie el nombre del archivo `.env.example` a `.env`.
+2. Descomente la las líneas que comienzan con VITE_SUPABASE_API_KEY y VITE_SUPABASE_URL, es decir, borre el signo de numeral que está al inicio de cada línea.
+3. Reemplace los valores después del igual por los valores proporcionados en su cuenta de Supabase.
 
 Para instalar y ejecutar este proyecto deberá tener Node.js instalado en su computador, de preferencia, la última versión.
 
@@ -56,15 +61,23 @@ git clone https://github.com/joshcast777/thesis-project.git
 cd thesis-project
 
 # Instala las dependencias
+pnpm i
+
+# Ejecuta el proyecto
+pnpm run dev
+```
+
+Se usó `PNPM` como gestor del proyecto. Sin embargo, puede usar NPM para gestionar el proyecto o el de su preferencia.
+
+Si desea usar `NPM`, después de clonar y acceder a la carpeta, ejecute lo siguiente:
+
+```bash
+# Instala las dependencias
 npm i
 
 # Ejecuta el proyecto
-npx run dev
+npm run dev
 ```
-
-El proyecto tiene un archivo `pnpm-lock.yaml`, lo que indica que el proyecto se creó con PNPM y no con NPM.
-
-El usar NPM no causará eproblemas al momento de ejecutarlo, solo descargará los node modules y creará el archivo package-lock.json
 
 ## Uso
 
